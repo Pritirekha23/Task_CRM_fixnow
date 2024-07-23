@@ -9,8 +9,8 @@ import {
   import { FaTasks, FaTrashAlt, FaUsers } from "react-icons/fa";
   import { useDispatch, useSelector } from "react-redux";
   import { Link, useLocation } from "react-router-dom";
-   import { setOpenSidebar } from "../redux/slices/authSlice";
-  import clsx from "clsx";
+  import { setOpenSidebar } from "../redux/slices/authSlice";
+  //import clsx from "clsx";
 
 const linkData = [
     {
@@ -71,4 +71,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar;

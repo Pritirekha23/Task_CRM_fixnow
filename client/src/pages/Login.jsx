@@ -1,5 +1,5 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import Textbox from '../components/Textbox';
@@ -11,11 +11,21 @@ const Login = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+ 
+  const user = useSelector((state) => state.auth.user);
+
   const submitHandler = async (data) => {
     console.log('submit', data);
     dispatch(setCredentials(data));
     navigate('/dashboard');
   };
+
+  useEffect(() => {
+    if (user) {
+      console.log('User:', user);
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
 
   return (
     <div className="w-full min-h-screen flex items-center flex-col lg:flex-row bg-[#f3f4f6]">
