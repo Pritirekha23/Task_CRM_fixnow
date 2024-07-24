@@ -17,13 +17,13 @@ function Layout() {
   console.log("Current user state in Layout:", user);
 
   return user ? (
-    <div className="w-full h-screen flex flex-col">
-      <div className="w-full">
-        <Navbar />
+    <div className="w-full h-screen flex">
+      <div className="w-1/5 h-full bg-white">
+        <Sidebar />
       </div>
-      <div className="flex flex-1">
-        <div className="w-1/5 bg-white hidden md:block">
-          <Sidebar />
+      <div className="flex-1 flex flex-col">
+        <div className="w-full">
+          <Navbar />
         </div>
         <div className="flex-1 overflow-y-auto p-4 2xl:px-10">
           <Outlet />
