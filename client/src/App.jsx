@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import TaskDetails from "./pages/TaskDetails";
-import Task from "./pages/Task";
+import Tasks from "./pages/Tasks";
 import Trash from "./pages/Trash";
 import Users from "./pages/Users";
 import { Toaster } from "sonner";
@@ -96,10 +96,10 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/task" element={<Task />} />
-          <Route path="/completed/:status" element={<Task />} />
-          <Route path="/in-progress/:status" element={<Task />} />
-          <Route path="/todo/:status" element={<Task />} />
+          <Route path="/tasks" element={<Tasks />} />
+          <Route path="/completed/:status" element={<Tasks />} />
+          <Route path="/in-progress/:status" element={<Tasks />} />
+          <Route path="/todo/:status" element={<Tasks />} />
           <Route path="/team" element={<Users />} />
           <Route path="/trashed" element={<Trash />} />
           <Route path="/task/:id" element={<TaskDetails />} />
