@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate, Outlet, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import TaskDetails from "./pages/TaskDetails";
@@ -8,6 +9,7 @@ import Task from "./pages/Task";
 import Trash from "./pages/Trash";
 import Users from "./pages/Users";
 import { Toaster } from "sonner";
+
 
 function Layout() {
   const { user } = useSelector((state) => state.auth);
@@ -20,6 +22,13 @@ function Layout() {
       <div className="w-1/5 h-screen bg-white sticky top-0 hidden md:block">
         <Sidebar />
       </div>
+
+      {/* <MobileSidebar> */}
+
+      <div className="flex-1 overflow-y-auto">
+        <Navbar />
+      </div>
+
       <div className="flex-1 overflow-y-auto">
         <div className="p-4 2xl:px-10">
           <Outlet />
