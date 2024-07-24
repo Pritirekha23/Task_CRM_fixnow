@@ -6,7 +6,7 @@ import {
   MdKeyboardDoubleArrowUp,
 } from "react-icons/md";
 import { LuClipboardEdit } from "react-icons/lu";
-import { FaNewspaper, FaArrowsToDot } from "react-icons/fa";
+import { FaNewspaper, FaTasks } from "react-icons/fa"; // Replace FaArrowsToDot with FaTasks or another valid icon
 import moment from "moment";
 import { summary } from "../assets/data";
 import clsx from "clsx";
@@ -167,7 +167,7 @@ const Dashboard = () => {
       _id: "4",
       label: "TODOS",
       total: totals["todo"] || 0,
-      icon: <FaArrowsToDot />,
+      icon: <FaTasks />, // Changed from FaArrowsToDot to FaTasks
       bg: "bg-[#be185d]",
     },
   ];
