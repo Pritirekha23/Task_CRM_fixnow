@@ -9,7 +9,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex justify-between items-center bg-white px-4 py-3 2xl:py-4 sticky z-10 top-0">
+    <div className="w-full flex justify-between items-center bg-white px-4 py-3 2xl:py-4 sticky z-10 top-0">
       {/* left side start */}
       <div className="flex gap-4">
         <button
