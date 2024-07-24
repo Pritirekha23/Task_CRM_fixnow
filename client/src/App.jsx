@@ -10,7 +10,7 @@ import Trash from "./pages/Trash";
 import Users from "./pages/Users";
 import { Toaster } from "sonner";
 import { setOpenSidebar } from "./redux/slices/authSlice";
-import { Fragment, useRef } from "react";
+import { Fragment } from "react";
 import { IoClose } from "react-icons/io5";
 import { Transition } from "@headlessui/react";
 import clsx from "clsx";
@@ -18,8 +18,6 @@ import clsx from "clsx";
 function Layout() {
   const { user } = useSelector((state) => state.auth);
   const location = useLocation();
-
-  console.log("Current user state in Layout:", user);
 
   return user ? (
     <div className="w-full h-screen flex">
@@ -43,7 +41,6 @@ function Layout() {
 
 const MobileSidebar = () => {
   const { isSidebarOpen } = useSelector((state) => state.auth);
-  const mobileMenuRef = useRef(null);
   const dispatch = useDispatch();
 
   const closeSidebar = () => {
@@ -65,7 +62,7 @@ const MobileSidebar = () => {
         <div
           ref={ref}
           className={clsx(
-            "md:hidden fixed inset-0 bg-black/40",
+            "md:hidden fixed inset-0 bg-black/40 z-50",
             isSidebarOpen ? "block" : "hidden"
           )}
           onClick={closeSidebar}
@@ -77,7 +74,7 @@ const MobileSidebar = () => {
             <div className="w-full flex justify-end px-5 mt-5">
               <button
                 onClick={closeSidebar}
-                className="flex items-center"
+                className="flex items-center p-2"
               >
                 <IoClose size={25} />
               </button>
