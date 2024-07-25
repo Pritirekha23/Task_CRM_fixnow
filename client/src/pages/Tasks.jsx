@@ -10,6 +10,7 @@ import BoardView from "../components/BoardView";
 import Button from "../components/Button";
 import { IoMdAdd } from "react-icons/io";
 import { tasks } from "../assets/data";
+import Table from "../components/task/Table";
 
 
 const TABS = [
