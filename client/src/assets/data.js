@@ -14,7 +14,7 @@ export const summary = {
         team: [
           {
             _id: "65c202d4aa62f32ffd1303cc",
-            name: "Codewave Asante",
+            name: "John Doe",
             title: "Administrator",
             role: "Admin",
             email: "admin@gmail.com",
@@ -32,6 +32,14 @@ export const summary = {
             title: "UX Designer",
             role: "Designer",
             email: "alex.johnson@example.com",
+          },
+          
+          {
+            _id: "65c317360fd86054f958baa08e",
+            name: "Pritirekha Panda",
+            title: "FullStack Developer",
+            role: "Designer",
+            email: "pritifixnow@gmail.com",
           },
         ],
         isTrashed: false,
@@ -128,10 +136,10 @@ export const summary = {
           },
           {
             _id: "65c27a0e18c0a1b750ad5cad",
-            name: "John Doe",
+            name: "Pritirekha Panda",
             title: "Software Engineer",
             role: "Developer",
-            email: "john.doe@example.com",
+            email: "priti@gmail.com",
           },
           {
             _id: "65c30b96e639681a13def0b5",

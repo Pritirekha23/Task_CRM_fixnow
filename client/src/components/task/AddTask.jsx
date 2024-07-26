@@ -3,8 +3,8 @@ import ModalWrapper from "../ModalWrapper";
 import { Dialog } from "@headlessui/react";
 import Textbox from "../Textbox";
 import { useForm } from "react-hook-form";
-//import UserList from "./UserList";
-//import SelectList from "../SelectList";
+import UserList from "./UserList";
+import SelectList from "../SelectList";
 import { BiImages } from "react-icons/bi";
 import Button from "../Button";
 
@@ -14,7 +14,7 @@ const PRIORIRY = ["HIGH", "MEDIUM", "NORMAL", "LOW"];
 const uploadedFileURLs = [];
 
 const AddTask = ({ open, setOpen }) => {
-    const task = "";
+  const task = "";
 
   const {
     register,
@@ -40,49 +40,49 @@ const AddTask = ({ open, setOpen }) => {
       <ModalWrapper open={open} setOpen={setOpen}>
         <form onSubmit={handleSubmit(submitHandler)}>
           <Dialog.Title
-            as='h2'
-            className='text-base font-bold leading-6 text-gray-900 mb-4'
+            as="h2"
+            className="text-base font-bold leading-6 text-gray-900 mb-4"
           >
             {task ? "UPDATE TASK" : "ADD TASK"}
           </Dialog.Title>
 
-          <div className='mt-2 flex flex-col gap-6'>
+          <div className="mt-2 flex flex-col gap-6">
             <Textbox
-              placeholder='Task Title'
-              type='text'
-              name='title'
-              label='Task Title'
-              className='w-full rounded'
+              placeholder="Task Title"
+              type="text"
+              name="title"
+              label="Task Title"
+              className="w-full rounded"
               register={register("title", { required: "Title is required" })}
               error={errors.title ? errors.title.message : ""}
             />
 
-            {/* <UserList setTeam={setTeam} team={team} /> */}
+            <UserList setTeam={setTeam} team={team} />
 
-            {/* <div className='flex gap-4'>
+            <div className="flex gap-4">
               <SelectList
-                label='Task Stage'
+                label="Task Stage"
                 lists={LISTS}
                 selected={stage}
                 setSelected={setStage}
               />
 
-              <div className='w-full'>
+              <div className="w-full">
                 <Textbox
-                  placeholder='Date'
-                  type='date'
-                  name='date'
-                  label='Task Date'
-                  className='w-full rounded'
+                  placeholder="Date"
+                  type="date"
+                  name="date"
+                  label="Task Date"
+                  className="w-full rounded"
                   register={register("date", {
                     required: "Date is required!",
                   })}
                   error={errors.date ? errors.date.message : ""}
                 />
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className='flex gap-4'>
+            <div className='flex gap-4'>
               <SelectList
                 label='Priority Level'
                 lists={PRIORIRY}
@@ -107,9 +107,9 @@ const AddTask = ({ open, setOpen }) => {
                   <span>Add Assets</span>
                 </label>
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className='bg-gray-50 py-6 sm:flex sm:flex-row-reverse gap-4'>
+            <div className='bg-gray-50 py-6 sm:flex sm:flex-row-reverse gap-4'>
               {uploading ? (
                 <span className='text-sm py-2 text-red-500'>
                   Uploading assets
@@ -128,7 +128,7 @@ const AddTask = ({ open, setOpen }) => {
                 onClick={() => setOpen(false)}
                 label='Cancel'
               />
-            </div> */}
+            </div>
           </div>
         </form>
       </ModalWrapper>
