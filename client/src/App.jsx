@@ -8,6 +8,8 @@ import TaskDetails from "./pages/TaskDetails";
 import Tasks from "./pages/Tasks";
 import Trash from "./pages/Trash";
 import Users from "./pages/Users";
+import Product from "./pages/Product";
+import Shortageproduct from "./pages/Shortageproduct";
 import { Toaster } from "sonner";
 import { setOpenSidebar } from "./redux/slices/authSlice";
 import { Fragment } from "react";
@@ -103,6 +105,8 @@ function App() {
           <Route path="/team" element={<Users />} />
           <Route path="/trashed" element={<Trash />} />
           <Route path="/task/:id" element={<TaskDetails />} />
+          <Route path="inventory/product" element={<Product />} />
+          <Route path="inventory/shortage-products" element={<Shortageproduct />} />
         </Route>
         <Route path="/log-in" element={<Login />} />
       </Routes>

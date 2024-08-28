@@ -5,13 +5,12 @@ import { setOpenSidebar } from "../redux/slices/authSlice";
 import UserAvatar from "./UserAvatar";
 import NotificationPanel from "./NotificationPanel";
 
-
 const Navbar = () => {
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   return (
-    <div className="w-full flex justify-between items-center bg-white px-4 py-3 2xl:py-4 sticky z-10 top-0">
+    <div className="w-full flex justify-between items-center bg-white px-4 py-3 2xl:py-4 sticky z-10 top-0" style={{ backgroundColor: "#1E201E" }}>
       {/* left side start */}
       <div className="flex gap-4">
         <button
@@ -34,9 +33,11 @@ const Navbar = () => {
       {/* left side end */}
 
       <div className="flex gap-2 items-center">
-        <NotificationPanel />
-        <UserAvatar />
+      <NotificationPanel color="#fff" />
+
+        <UserAvatar  />
       </div>
+
     </div>
   );
 };
